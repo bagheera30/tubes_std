@@ -24,6 +24,7 @@ struct elmDK{
 struct elmPAS{
     infotypePAS infoPAS;
     nextPAS adrPAS;
+
 };
 struct ListDOK
 {
