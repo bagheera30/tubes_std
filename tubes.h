@@ -34,6 +34,11 @@ struct ListPAS
     adrPAS firstPAS;
 };
 
-void
+void createLD(ListDOK &D);
+adrDK bikinDataDoK(infotypeDOK DK);
+void insertDataDK(ListDOK &D,adrDK K);
+void ShowallDOK(ListDOK D);
+void deleteDok(ListDOK &D,adrDK &K);
+
 
 #endif // TUBES_H_INCLUDED
