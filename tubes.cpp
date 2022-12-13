@@ -29,9 +29,38 @@ void ShowallDOK(ListDOK D){
         cout << endl;
     }
 }
+adrDK findprec(ListDOK D,infotypeDOK DK){
+    K=D.firstDK
+    while(K!=NULL&&K->infoDOK!=DK){
+        K=K->K;
+    }
+    if(K->infoDOK=DK){
+        return K
+    }else{
+        return NULL;
+    }
+}
 void deleteDok(ListDOK &D,adrDK &K){
     if(D.firstDK!=NULL){
         x=D.firstDK;
-        if(x->nextDK)
+        prec=findprec(D,)
+        if(x->nextDK=NULL){
+            K=D.firstDK;
+            D.firstDK=K->nextDK;
+            K->nextDK=NULL;
+        }else if(D.firstDK!=NULL&&prec!=NULL){
+            K=prec->nextDK;
+            prec->nextDK=K->nextDK;
+            K->nextDK=NULL
+        }else{
+            while(x->nextDK->nextDK!=NULL){
+                x=x->nextDK;
+            }
+            K=x->nextDK;
+            x->nextDK=NULL;
+            K->nextDK=NULL;
+        }
+    }else{
+
     }
 }
