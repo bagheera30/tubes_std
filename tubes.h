@@ -23,8 +23,8 @@ struct elmDK{
 struct elmPAS{
     infotypePAS infoPAS;
     nextPAS adrPAS;
-    prev adrPAS;
-    Class adrPAS;
+    prevPAS adrPAS;
+    ClassPAS adrPAS;
 };
 struct ListDOK
 {

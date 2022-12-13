@@ -40,22 +40,26 @@ adrDK findprec(ListDOK D,infotypeDOK DK){
         return NULL;
     }
 }
-void deleteDok(ListDOK &D,adrDK &K){
-    if(D.firstDK!=NULL){
-        x=D.firstDK;
+void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama){
+    K->info.tgl=tanggal;
+    K->info.nama=nama;
+    adrDK x=D.firstDK;
+    while(x->info.tgl!=tgl&&x->info.nama&&X=NULL){
+         if(D.firstDK!=NULL){
+
         if(x->nextDK=NULL){
             K=D.firstDK;
             D.firstDK=K->nextDK;
             K->nextDK=NULL;
+        }else if(x->nextDK==NULL){
+            k=x->nextDK;
+            x->next=NULL;
+            K->nextDK=NULL;
         }else{
-            while(x->nextDK->nextDK!=NULL){
-                x=x->nextDK;
-            }
-            K=x->nextDK;
-            x->nextDK=NULL;
+            p=x->nextDK;
+            x->next=K->nextDK;
             K->nextDK=NULL;
         }
-    }else{
-
     }
+
 }
