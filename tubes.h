@@ -25,6 +25,13 @@ struct elmPAS{
     infotypePAS infoPAS;
     nextPAS adrPAS;
 };
-
+struct ListDOK
+{
+    adrDK firstDK;
+};
+struct ListPAS
+{
+    adrPAS firstPAS;
+};
 
 #endif // TUBES_H_INCLUDED
