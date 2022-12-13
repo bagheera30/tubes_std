@@ -5,7 +5,7 @@
 using namespace std;
 
 struct dok{
-    int ID,kd,jam;
+    int tgl,ID,kd,jam;
     string nama,sp;
 };
 struct pas{
