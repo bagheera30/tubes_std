@@ -19,12 +19,11 @@ typedef pas infotypePAS;
 struct elmDK{
     infotypeDOK infoDOK;
     nextDOK adrDK;
-    prev adrDK;
 };
 struct elmPAS{
     infotypePAS infoPAS;
     nextPAS adrPAS;
-
+    prev adrPAS
 };
 struct ListDOK
 {
