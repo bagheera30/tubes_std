@@ -43,15 +43,10 @@ adrDK findprec(ListDOK D,infotypeDOK DK){
 void deleteDok(ListDOK &D,adrDK &K){
     if(D.firstDK!=NULL){
         x=D.firstDK;
-        prec=findprec(D,)
         if(x->nextDK=NULL){
             K=D.firstDK;
             D.firstDK=K->nextDK;
             K->nextDK=NULL;
-        }else if(D.firstDK!=NULL&&prec!=NULL){
-            K=prec->nextDK;
-            prec->nextDK=K->nextDK;
-            K->nextDK=NULL
         }else{
             while(x->nextDK->nextDK!=NULL){
                 x=x->nextDK;

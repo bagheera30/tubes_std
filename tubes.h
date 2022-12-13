@@ -23,7 +23,8 @@ struct elmDK{
 struct elmPAS{
     infotypePAS infoPAS;
     nextPAS adrPAS;
-    prev adrPAS
+    prev adrPAS;
+    Class adrPAS;
 };
 struct ListDOK
 {
@@ -32,6 +33,7 @@ struct ListDOK
 struct ListPAS
 {
     adrPAS firstPAS;
+    adrPAS last;
 };
 
 void createLD(ListDOK &D);
