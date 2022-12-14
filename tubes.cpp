@@ -1,47 +1,46 @@
 #include "tubes.h"
 
 void createLD(ListDOK &D){
-    D.firstDK=NULL;
+    first(D)=NULL;
 }
 adrDK bikinDataDoK(infotypeDOK DK){
     adrDK K=new elmDK;
-    K->infoDOK=DK;
-    K->nextDOK=NULL;
-    K->prev=NULL;
-    return K
+    info(K)=DK;
+    next(K)=NULL;
+    return K;
 }
 void insertDataDK(ListDOK &D,adrDK K){
-    if(D.firstDK=NULL){
-        D.firstDK=K
+    if(first(D)=NULL){
+        first(D)=K;
     }else{
-        K->nextDOK=D.firstDK
-        D.firstDK=K
+        next(K)=first(D)
+        first(D)=K;
     }
 }
 void ShowallDOK(ListDOK D){
     adrDK K;
-    K = D.first;
+    K = first(D);
     while (K != NULL)
     {
-        cout <<"tanggal : " <<  K->info.tgl << "jam : "<<K->info.jam<<" ID dokter: " << K->info.ID <<" nama dokter : "<< K->info.nama << " penyakit di periksa : "<< K->info.sp  <<" kouta : "
-        <<K->info.kd<<endl
-        K = K->next;
+        cout <<"tanggal : " <<  info(K).tgl << "jam : "<<info(K).jam<<" ID dokter: " << info(K).ID <<" nama dokter : "<< info(K).nama << " penyakit di periksa : "<< info(K).sp  <<" kouta : "
+        <<info(K).kd<<endl
+        K = next(K);
         cout << endl;
     }
 }
-adrDK findprec(ListDOK D,infotypeDOK DK){
-    K=D.firstDK
-    while(K!=NULL&&K->infoDOK!=DK){
-        K=K->K;
+adrDK findDOK(ListDOK D,adrDK K,string nama,int tanggal){
+    K=first(D);
+    while(K!=NULL&&info(K).nama!=nama&&info(K).tanggal!=tanggal){
+        K=next(K);
     }
-    if(K->infoDOK=DK){
+    if(DK.nama=DK){
         return K
     }else{
         return NULL;
     }
 }
 void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama){
-    K->info.tgl=tanggal;
+    .tgl=tanggal;
     K->info.nama=nama;
     adrDK x=D.firstDK;
     while(x->info.tgl!=tgl&&x->info.nama&&X=NULL){

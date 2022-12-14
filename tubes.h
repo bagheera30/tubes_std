@@ -1,6 +1,11 @@
 #ifndef TUBES_H_INCLUDED
 #define TUBES_H_INCLUDED
 #include <iostream>
+#define next(P) (P)->next
+#define prev(P) (P)->prev
+#define info(P) (P)->info
+#define jadwalD(Q) ((Q).jadwalD)
+#define first(L) ((L).first
 
 using namespace std;
 
@@ -22,17 +27,17 @@ struct elmDK{
 };
 struct elmPAS{
     infotypePAS infoPAS;
-    nextPAS adrPAS;
-    prevPAS adrPAS;
-    ClassPAS adrPAS;
+    adrPAS next;
+    adrPAS prev;
+    adrPAS jadwalD;
 };
 struct ListDOK
 {
-    adrDK firstDK;
+    adrDK first;
 };
 struct ListPAS
 {
-    adrPAS firstPAS;
+    adrPAS first;
     adrPAS last;
 };
 
