@@ -43,10 +43,17 @@ struct ListPAS
 };
 
 void createLD(ListDOK &D);
+void createLP(ListPAS &PA);
+adrPAS bikinDataPAS(infotypePAS PS)
 adrDK bikinDataDoK(infotypeDOK DK);
+void dataBaruPas(ListPAS &PA,adrPAS S);
+adrDK caritgl(ListDOK &D,int tgl);
+adrPAS carips(ListPAS &PA,string ID,string namaPS);
+void datapsbarutgl(ListDOK &D,ListPAS &PA,int tgl,int KP);
+adrDK findDOK(ListDOK &D,string nama,int tanggal);
+void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS)
 void insertDataDK(ListDOK &D,adrDK K);
-void ShowallDOK(ListDOK D);
-void deleteDok(ListDOK &D,adrDK &K);
+void ShowallDOK(ListDOK &D);
 void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama);
 
 

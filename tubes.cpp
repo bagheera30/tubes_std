@@ -120,7 +120,7 @@ void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS){
 		first(D)=next(S);
 		prev(K)= NULL;
 		prev(first(PS))=NULL;
-		next(S)=nullptr
+		next(S)=NULL;
     }else if(next(S)==NUL){
         last(PS)=prev(last(PS));
         prev(S)=NULL;
@@ -130,7 +130,7 @@ void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS){
         while(next(prec)!=K){
             prec=next(prec);
         }
-        =next(prec);
+        S=next(prec);
         next(prec)=next(S);
         if(S==last(PS)){
             last(PS)=prev(S);
