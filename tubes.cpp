@@ -46,7 +46,7 @@ void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama){
     while(x->info.tgl!=tgl&&x->info.nama&&X=NULL){
          if(D.firstDK!=NULL){
 
-        if(x->nextDK=NULL){
+        if(next(X)=NULL){
             K=D.firstDK;
             D.firstDK=K->nextDK;
             K->nextDK=NULL;
