@@ -63,8 +63,9 @@ adrDK caritgl(ListDOK &D,int tgl){
 }
 void datapsbarutgl(ListDOK &D,ListPAS &PA,int tgl,int KP){
     adrDK K=caritgl(D,tgl);
-    if(info(S).KP!=0){
+    if(info(K).KP>=0){
         dataBaruPas(PA,S);
+        info(K).kp--
     }else{
 
     }
