@@ -5,12 +5,13 @@
 #define prev(P) (P)->prev
 #define info(P) (P)->info
 #define jadwalD(Q) ((Q).jadwalD)
-#define first(L) ((L).first
+#define first(L) ((L).first)
+#define last(L) ((L).last)
 
 using namespace std;
 
 struct dok{
-    int tgl,ID,kd,jam;
+    int tgl,ID,kp,jam;
     string nama,sp;
 };
 struct pas{

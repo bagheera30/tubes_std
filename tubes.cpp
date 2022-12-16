@@ -3,11 +3,33 @@
 void createLD(ListDOK &D){
     first(D)=NULL;
 }
+void createLP(ListPAS &PA){
+    first(P)=NULL;
+    last(P)=NULL;
+}
 adrDK bikinDataDoK(infotypeDOK DK){
     adrDK K=new elmDK;
     info(K)=DK;
     next(K)=NULL;
     return K;
+}
+adrPAS bikinDataPAS(infotypePAS PS){
+    adrPAS S=new elmPAS;
+    info(S)=PS;
+    next(S)=NULL;
+    jadwalD(S)=NULL;
+    prev(S)=NULL;
+    return S;
+}
+void dataBaruPas(ListPAS &PA,adrPAS S){
+    if(first(PA)!=NULL&&last(PA)!=NULL){
+        prev(S)=last(PA);
+        next(last(PA))=S;
+        last(PA)=S;
+    }else{
+        last(PA)=S;
+        firs(PA)=S;
+    }
 }
 void insertDataDK(ListDOK &D,adrDK K){
     if(first(D)=NULL){
@@ -28,12 +50,31 @@ void ShowallDOK(ListDOK D){
         cout << endl;
     }
 }
+adrDK caritgl(ListDOK &D,int tgl){
+     adrDK K=first(D);
+    while(K!=NULL&&info(K).tgl!= tgl){
+        K=next(K)
+    }
+    if(info(K).tgl==tgl){
+        return K
+    }else{
+        return NULL
+    }
+}
+void datapsbarutgl(ListDOK &D,ListPAS &PA,int tgl,int KP){
+    adrDK K=caritgl(D,tgl);
+    if(info(S).KP!=0){
+        dataBaruPas(PA,S);
+    }else{
+
+    }
+}
 adrDK findDOK(ListDOK &D,string nama,int tanggal){
     adrDK K=first(D);
     while(K!=NULL&&info(K).nama!=nama&&info(K).tgl!=tanggal){
         K=next(K);
     }
-    if(info(K).nama==nama,info(K).tgl==tanggal){
+    if(info(K).nama==nama&&info(K).tgl==tanggal){
         return K;
     }else{
         return NULL;
