@@ -116,22 +116,28 @@ void deleteDok(ListDOK &D,adrDK &K,string nama,int tgl){
 }
 void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS){
     S=carips(PA,ID,namaPS);
-    if(K==first(D)){
-        K=first(D);
-		first(D)=next(K);
-		next(K)= NULL;
-    }else if(next(K)==NUL){
-        adrDK Q
-        P ← next(Q)
-        next(Q) ← NULL
-        next(P) ← NULL
+    if(S==first(PS)){
+		first(D)=next(S);
+		prev(K)= NULL;
+		prev(first(PS))=NULL;
+		next(S)=nullptr
+    }else if(next(S)==NUL){
+        last(PS)=prev(last(PS));
+        prev(S)=NULL;
+        next(S)=NULL;
     }else{
         adrDK prec=first(D);
         while(next(prec)!=K){
             prec=next(prec);
         }
-        K=next(prec);
-        next(prec)=next(K);
-        next(K)=NULL;
+        =next(prec);
+        next(prec)=next(S);
+        if(S==last(PS)){
+            last(PS)=prev(S);
+        }else{
+            prev(next(S))=prec;
+        }
+        next(S)=NULL;
+        prev(S)=NULL;
     }
 }
