@@ -46,6 +46,7 @@ adrDK bikinDataDoK(infotypeDOK DK);
 void insertDataDK(ListDOK &D,adrDK K);
 void ShowallDOK(ListDOK D);
 void deleteDok(ListDOK &D,adrDK &K);
+void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama);
 
 
 #endif // TUBES_H_INCLUDED
