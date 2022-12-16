@@ -34,14 +34,21 @@ adrDK findDOK(ListDOK &D,string nama,int tanggal){
         K=next(K);
     }
     if(DK.nama==DK){
-        return K
+        return K;
     }else{
         return NULL;
     }
 }
-void deleteDok(ListDOK &D,adrDK &K,int tgl,string nama){
-    K=findDOK(ListDOK &D,string nama,int tanggal
-    if(K==first(L)){
-
+void deleteDok(ListDOK &D,adrDK &K,string nama,int tgl){
+    K=findDOK(D,nama,tgl)
+    if(K==first(D)){
+        K=first(D);
+		first(D)=next(K);
+		next(K)= NULL;
+    }else if(next(K)==NUL){
+        adrDK Q
+        P ← next(Q)
+			next(Q) ← NULL
+			next(P) ← NULL
     }
 }

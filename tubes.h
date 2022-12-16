@@ -22,11 +22,11 @@ typedef struct elmPAS *adrPAS;
 typedef dok infotypeDOK;
 typedef pas infotypePAS;
 struct elmDK{
-    infotypeDOK infoDOK;
+    infotypeDOK info;
     nextDOK adrDK;
 };
 struct elmPAS{
-    infotypePAS infoPAS;
+    infotypePAS info;
     adrPAS next;
     adrPAS prev;
     adrPAS jadwalD;
