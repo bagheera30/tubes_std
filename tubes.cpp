@@ -30,10 +30,10 @@ void ShowallDOK(ListDOK D){
 }
 adrDK findDOK(ListDOK &D,string nama,int tanggal){
     adrDK K=first(D);
-    while(K!=NULL&&info(K).nama!=nama&&info(K).tanggal!=tanggal){
+    while(K!=NULL&&info(K).nama!=nama&&info(K).tgl!=tanggal){
         K=next(K);
     }
-    if(DK.nama==DK){
+    if(info(K).nama==nama,info(K).tgl==tanggal){
         return K;
     }else{
         return NULL;
@@ -48,7 +48,15 @@ void deleteDok(ListDOK &D,adrDK &K,string nama,int tgl){
     }else if(next(K)==NUL){
         adrDK Q
         P ← next(Q)
-			next(Q) ← NULL
-			next(P) ← NULL
+        next(Q) ← NULL
+        next(P) ← NULL
+    }else{
+        adrDK prec=first(D);
+        while(next(prec)!=K){
+            prec=next(prec);
+        }
+        K=next(prec);
+        next(prec)=next(K);
+        next(K)=NULL;
     }
 }
