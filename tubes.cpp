@@ -61,15 +61,27 @@ adrDK caritgl(ListDOK &D,int tgl){
         return NULL
     }
 }
+adrPAS carips(ListPAS &PA,string ID,string namaPS){
+    adrPAS S =first(PA);
+    while(S!=NULL&&info(S).mid!=ID,info(S).namaPS!=namaPS){
+        s=next(S)
+    }
+    if(info(S).mid!=ID,info(S).namaPS!=namaPS){
+        return S
+    }else{
+        return NULL;
+    }
+}
 void datapsbarutgl(ListDOK &D,ListPAS &PA,int tgl,int KP){
     adrDK K=caritgl(D,tgl);
     if(info(K).KP>=0){
         dataBaruPas(PA,S);
         info(K).kp--
     }else{
-
+        cout<<"masukan ke dokter lain"<<endl;
     }
 }
+
 adrDK findDOK(ListDOK &D,string nama,int tanggal){
     adrDK K=first(D);
     while(K!=NULL&&info(K).nama!=nama&&info(K).tgl!=tanggal){
@@ -83,6 +95,27 @@ adrDK findDOK(ListDOK &D,string nama,int tanggal){
 }
 void deleteDok(ListDOK &D,adrDK &K,string nama,int tgl){
     K=findDOK(D,nama,tgl)
+    if(K==first(D)){
+        K=first(D);
+		first(D)=next(K);
+		next(K)= NULL;
+    }else if(next(K)==NUL){
+        adrDK Q
+        P ← next(Q)
+        next(Q) ← NULL
+        next(P) ← NULL
+    }else{
+        adrDK prec=first(D);
+        while(next(prec)!=K){
+            prec=next(prec);
+        }
+        K=next(prec);
+        next(prec)=next(K);
+        next(K)=NULL;
+    }
+}
+void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS){
+    S=carips(PA,ID,namaPS);
     if(K==first(D)){
         K=first(D);
 		first(D)=next(K);

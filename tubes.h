@@ -15,7 +15,7 @@ struct dok{
     string nama,sp;
 };
 struct pas{
-    string namaDK,mID,jenis,hasil;
+    string namaPS,mID,jenis,hasil;
     int bDK,bOB;
 };
 typedef struct elmDOK *adrDK;
