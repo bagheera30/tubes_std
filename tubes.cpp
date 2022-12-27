@@ -53,21 +53,21 @@ void ShowallDOK(ListDOK D){
 adrDK caritgl(ListDOK &D,int tgl){
      adrDK K=first(D);
     while(K!=NULL&&info(K).tgl!= tgl){
-        K=next(K)
+        K=next(K);
     }
     if(info(K).tgl==tgl){
-        return K
+        return K;
     }else{
-        return NULL
+        return NULL;
     }
 }
 adrPAS carips(ListPAS &PA,string ID,string namaPS){
     adrPAS S =first(PA);
     while(S!=NULL&&info(S).mid!=ID,info(S).namaPS!=namaPS){
-        s=next(S)
+        s=next(S);
     }
     if(info(S).mid!=ID,info(S).namaPS!=namaPS){
-        return S
+        return S;
     }else{
         return NULL;
     }
@@ -76,7 +76,7 @@ void datapsbarutgl(ListDOK &D,ListPAS &PA,int tgl,int KP){
     adrDK K=caritgl(D,tgl);
     if(info(K).KP>=0){
         dataBaruPas(PA,S);
-        info(K).kp--
+        info(K).kp--;
     }else{
         cout<<"masukan ke dokter lain"<<endl;
     }
