@@ -11,7 +11,7 @@
 using namespace std;
 
 struct dok{
-    int tgl,ID,kp,jam;
+    int tgl,ID,kp,jamstr,jamend;
     string nama,sp;
 };
 struct pas{
