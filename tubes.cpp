@@ -50,6 +50,16 @@ void ShowallDOK(ListDOK D){
         cout << endl;
     }
 }
+void showp(ListPAS PS){
+    adrPAS P=first(PS);
+    while(P!=NULL){
+        cout<<"medical record"<<info(P).mID<<endl;
+        cout<<"nama pasien"<<info(P).namaPS<<endl;
+        cout<<"jenis pasien"<<info(P).jenis<<endl;
+        cout<<"biaya Dokter: "<<info(P).bDK<<endl;
+        cout<<"biaya obat: "<<info(P).OB<<endl;
+    }
+}
 adrDK caritgl(ListDOK &D,int tgl){
      adrDK K=first(D);
     while(K!=NULL&&info(K).tgl!= tgl){
@@ -140,4 +150,21 @@ void hapusPS(ListPAS &PS,adrPAS &S,string ID,string namaPS){
         next(S)=NULL;
         prev(S)=NULL;
     }
+}
+void findps(ListPAS &PS,ListDOK &D,adrDK DK,adrPAS P,string nama,int tgl){
+    P=first(PS);
+    while(P!=NULL&&info(P).namaPS==nama){
+        DK=first(D);
+        while(D!=NULL,info(DK).tgl!=tgl){
+
+        }
+    }
+}
+int pilihmenu(){
+    int input=0;
+    cout<<"========== Rumah Sakit  ========="<<endl;
+    cout<<"1. tambah pasien"<<endl;
+    cout<<"2. tambah dokter"<<endl;
+    cout<<"3. tambah dokter"<<endl;
+
 }
