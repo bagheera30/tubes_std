@@ -84,6 +84,10 @@ void deletePS(ListPAS &PA,string mid,string namaPS){
 
 	}
 }
+adrPAS penyakit(ListPAS &PA,string hasil){
+
+}
+adrPAS findPasien(ListPAS &PA,string tanggaalS)
 int pilihmenu(){
     int input=0;
     cout<<"========== Rumah Sakit  ========="<<endl;
