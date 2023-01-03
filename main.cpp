@@ -46,12 +46,16 @@ int main()
         }else if(pilih==3){
             showPAS(PA);
         }else if(pilih==4){
+            cout<<"nama pasien: ";cin>>namaP;
+            cout<<"medical record: ";cin>>mid;
             cout<<"-----data sebelum pindah---------"<<endl;
-            cout<<"nama pasien: ";cin>>a.namaPS;
-            cout<<"medical record: ";cin>>a.mID;
-            cout<<"dokter spesialisasi: ";cin>>d.spesialisasi;
-            cout<<"tanggal: ";cin>>d.tanggal;
-
+            cout<<"dokter spesialisasi: ";cin>>speasialis_awal;
+            cout<<"tanggal: ";cin>>tanggal_awal;
+            cout<<"-----data akan pindah---------"<<endl;
+            cout<<"dokter spesialisasi pindah: ";cin>>speasialis_akhir;
+            cout<<"tanggal pindah: ";cin>>tanggal_akhir;
+            pindah_jadwal(LD,PA,namaP,mid,speasialis_awal,tanggal_awal,speasialis_akhir,tanggal_akhir);
+        }else if(pilih==5){
 
         }
     }
