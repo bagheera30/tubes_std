@@ -87,12 +87,127 @@ void deletePS(ListPAS &PA,string mid,string namaPS){
 adrPAS penyakit(ListPAS &PA,string hasil){
 
 }
-adrPAS findPasien(ListPAS &PA,string tanggaalS)
+void creatListDokter(ListDokter &LD){
+	(LD).first = NULL;
+}
+adr_dokter createElementDokter(dokter data){
+	adr_dokter a = new element_dokter;
+	(a)->next = NULL;
+	(a)->info = data;
+	return a;
+}
+
+void insertFirstDokter(ListDokter &LD,adr_dokter data){
+	if((LD).first != NULL){
+		(data)->next = (LD).first;
+		(LD).first = data;
+	}else{
+		(LD).first = data;
+	}
+}
+
+void showDokter(ListDokter LD){
+	adr_dokter q = (LD).first;
+	if(q!=NULL){
+		cout << "=== Data Dokter ===" << endl;
+		while(q != NULL){
+			dokter d = (q)->info;
+			cout << "ID : " <<  d.id << endl;
+			cout << "Nama : " <<  d.nama << endl;
+			cout << "Spesialisasi : " <<  d.spesialisasi << endl;
+			cout << "Tanggal (dd-mm-yyyy) : " <<  d.tanggal << endl;
+			cout << "Jam Praktek (Start) : " <<  d.jam_praktek_start  << endl;
+			cout << "Jam Praktek (End) : " <<  d.jam_praktek_end  << endl;
+			cout << "Kuota Pasien : " <<  d.kuota  << endl << endl;
+			q = (q)->next;
+		}
+		cout << endl;
+	}else {
+		cout << "Data Dokter Kosong :( " << endl;
+	}
+}
+
+
+bool checkDokter(ListDokter LD,string spesialisasi,string tanggal){
+	adr_dokter q = (LD).first;
+	bool ans=false;
+	if(q!=NULL){
+		while(q != NULL){
+			dokter d = (q)->info;
+			if (d.tanggal == tanggal && d.spesialisasi == spesialisasi) {
+				ans=true;
+			}
+			q = (q)->next;
+		}
+	}
+	return ans;
+}
+
+void deleteDokter(ListDokter &LD, string nama,string tanggal){
+	adr_dokter q = (LD).first;
+	if(q!=NULL){
+		bool flag = false;
+		adr_dokter qq = q;
+		while(q != NULL){
+			dokter d = (q)->info;
+			if (d.tanggal == tanggal && d.nama == nama) {
+				flag = true;
+				break;
+			}
+			qq=q;
+			q = (q)->next;
+		}
+
+		if (flag) {
+			if(q == (LD).first){
+				adr_dokter p = (LD).first;
+				(LD).first = (p)->next;
+				(p)->next = NULL;
+			}else if ((q)->next == NULL) {
+				(qq)->next = NULL;
+			}else{
+				(qq)->next = (q)->next;
+				(q)->next = NULL;
+			}
+			cout << "Dokter berhasil di hapus" << endl;
+		}else {
+			cout << "Dokter dengan nama " << nama << " tidak tersedia pada tanggal " << tanggal << endl;
+		}
+
+	}
+}
+adr_dokter findDokter(ListDokter LD,string spesialisasi,string tanggal){
+	adr_dokter q = (LD).first;
+	adr_dokter ans;
+	if(q!=NULL){
+
+		while(q != NULL){
+			dokter d = (q)->info;
+			if (d.tanggal == tanggal && d.spesialisasi == spesialisasi) {
+				ans=q;
+			}
+			q = (q)->next;
+		}
+	}
+	return ans;
+}
+void tambahps(ListPAS &PA,ListDokter &LD,string spesialisasi,string tanggal){
+    data=findDokter(LD,spesialisasi,tanggal);
+    if(info(data).kouta!=0){
+        dataBaruPas(PA,ps);
+        jadwalD(ps)=data;
+        info(data).kouta--
+    }
+}
 int pilihmenu(){
-    int input=0;
+    int input;
     cout<<"========== Rumah Sakit  ========="<<endl;
     cout<<"1. tambah pasien"<<endl;
     cout<<"2. tambah dokter"<<endl;
-    cout<<"3. tambah dokter"<<endl;
+    cout<<"3. tampilkan data pasien "<<endl;
+    cout<<"0.keluar "<<endl;
+    cout<<"pilih menu:"
+    cin>>input;
+    return input;
 
 }

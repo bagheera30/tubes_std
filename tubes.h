@@ -10,21 +10,21 @@
 
 using namespace std;
 
-struct dok{
-    int tgl,ID,kp,jamstr,jamend;
-    string nama,sp;
+struct dokter{
+	string tanggal,nama,spesialisasi,jam_praktek_start,jam_praktek_end;
+	int kuota,id;
 };
 struct pas{
     string namaPS,mID,jenis,hasil;
     int bDK,bOB;
 };
-typedef struct elmDOK *adrDK;
+typedef struct element_dokter *adr_dokter;
 typedef struct elmPAS *adrPAS;
 typedef dok infotypeDOK;
 typedef pas infotypePAS;
-struct elmDK{
-    infotypeDOK info;
-    nextDOK adrDK;
+struct element_dokter {
+	dokter info;
+	adr_dokter next;
 };
 struct elmPAS{
     infotypePAS info;
@@ -32,10 +32,10 @@ struct elmPAS{
     adrPAS prev;
     adrPAS jadwalD;
 };
-struct ListDOK
-{
-    adrDK first;
+struct ListDokter{
+	adr_dokter first;
 };
+
 struct ListPAS
 {
     adrPAS first;

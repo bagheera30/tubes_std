@@ -8,22 +8,14 @@ int main()
     infotypeDOK infoDOK;
     adrDK K;
     int n;
-    cin>>n;
-
-    createLD(D);
-    while(n>0){
-        cout<<("nama dokter : ");
-        cin >> infoDOK.nama;
-        cout << "ID dokter   : ";
-        cin >> infoDOK.ID;
-        cout<<"tanggal";
-        cin>>infoDOKtgl;
-        K=bikinDataDoK(infoDOK);
-        insertDataDK(D,K);
+    pilih=pilihmenu();
+    while(pilih!=0){
+        if(pilih==1){
+            tambahps(PA,LD,speasialisasi,tanggal);
+        }
     }
 
-        ShowallDOK(D);
-        cin>>nama>>tgl;
-        deleteDok(D,K,tgl,nama)
+    createLD(D);
+
     return 0;
 }
