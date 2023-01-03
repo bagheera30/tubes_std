@@ -20,14 +20,12 @@ struct pas{
 };
 typedef struct element_dokter *adr_dokter;
 typedef struct elmPAS *adrPAS;
-typedef dok infotypeDOK;
-typedef pas infotypePAS;
 struct element_dokter {
 	dokter info;
 	adr_dokter next;
 };
 struct elmPAS{
-    infotypePAS info;
+    pas info;
     adrPAS next;
     adrPAS prev;
     adrPAS jadwalD;
