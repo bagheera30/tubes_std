@@ -6,12 +6,15 @@ int main()
 {
     ListDokter LD;
     ListPAS PA;
-    infotypeDOK info;
+
     adr_dokter K;
     adrPAS ps;
     dokter d;
+    pas a;
     creatListDokter(LD);
     createLP(PA);
+
+    string
 
     pilih=pilihmenu();
     while(pilih!=0){
@@ -44,7 +47,12 @@ int main()
             showPAS(PA);
         }else if(pilih==4){
             cout<<"-----data sebelum pindah---------"<<endl;
-            cout<<""
+            cout<<"nama pasien: ";cin>>a.namaPS;
+            cout<<"medical record: ";cin>>a.mID;
+            cout<<"dokter spesialisasi: ";cin>>d.spesialisasi;
+            cout<<"tanggal: ";cin>>d.tanggal;
+
+
         }
     }
 
