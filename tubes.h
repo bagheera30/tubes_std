@@ -44,6 +44,7 @@ void createLP(ListPAS &PA);
 adrPAS bikinDataPAS(pas PS);
 void dataBaruPas(ListPAS &PA,adrPAS S);
 void showPAS(ListPAS PA);
+void showpd(ListPAS PA,string nama,string mid);
 void deletePS(ListPAS &PA,string mid,string namaPS);
 void biaya(ListPAS &PA,string nama,string mid,string hasil);
 void showtanggal(ListDokter &LD,ListPAS &PA,string tanggal);

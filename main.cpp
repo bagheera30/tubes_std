@@ -31,7 +31,7 @@ int main()
         cout<<"7. tampikan data dokter "<<endl;
         cout<<"8. jumlah pasien "<<endl;
         cout<<"9. delete pasien "<<endl;
-        cout<<"9. pasien dan dokternya "<<endl;
+        cout<<"10. pasien dan dokternya "<<endl;
         cout<<"0.keluar "<<endl;
         cout<<"pilih menu:";
         cin>>n;
@@ -92,8 +92,13 @@ int main()
         }else if(n==9){
             string mid,namaps;
             cout<<"masukan medical ID: ";cin>>mid;
-            cout<<"masukan nama pasien: ";cin>>mid;
+            cout<<"masukan nama pasien: ";cin>>namaps;
             deletePS(PA,mid,namaps);
+        }else if(n==10){
+            string mid,namaps;
+            cout<<"masukan medical ID: ";cin>>mid;
+            cout<<"masukan nama pasien: ";cin>>namaps;
+            showpd(PA,namaps,mid);
         }
     }
 
