@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1672846086 source:c:\users\asus\documents\rizki alfian\tubes_std\main.cpp
+1672848486 source:c:\users\asus\documents\rizki alfian\tubes_std\main.cpp
 	<iostream>
 	"tubes.h"
 
-1672846167 c:\users\asus\documents\rizki alfian\tubes_std\tubes.h
+1672848486 c:\users\asus\documents\rizki alfian\tubes_std\tubes.h
 	<iostream>
 
 1672845219 source:c:\users\asus\documents\rizki alfian\tubes_std\tubes.cpp

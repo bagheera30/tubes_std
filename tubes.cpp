@@ -130,13 +130,14 @@ void showtanggal(ListDokter &LD,ListPAS &PA,string tanggal){
         data=next(data);
     }
 }
-void tambahps(ListPAS &PA,ListDokter &LD,adrPAS ps,string spesialisasi,string tanggal){
-    adr_dokter data=findDokter(LD,spesialisasi,tanggal);
-    if(data!=NULL){
-        if(info(data).kuota>0){
+void tambahps(ListPAS &PA,ListDokter &LD,adrPAS ps,pas data,string spesialisasi,string tanggal){
+    adr_dokter dataD=findDokter(LD,spesialisasi,tanggal);
+    if(dataD!=NULL){
+        if(info(dataD).kuota>0){
+            adrPAS ps=bikinDataPAS(data);
             dataBaruPas(PA,ps);
-            jadwalD(ps)=data;
-            info(data).kuota--;
+            jadwalD(ps)=dataD;
+            info(dataD).kuota--;
         }else{
             cout<<"mohon masukin ke jadwal lain"<<endl;
         }

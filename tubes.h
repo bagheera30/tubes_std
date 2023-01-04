@@ -48,7 +48,7 @@ void showpd(ListPAS PA,string nama,string mid);
 void deletePS(ListPAS &PA,string mid,string namaPS);
 void biaya(ListPAS &PA,string nama,string mid,string hasil);
 void showtanggal(ListDokter &LD,ListPAS &PA,string tanggal);
-void tambahps(ListPAS &PA,ListDokter &LD,adrPAS ps,string spesialisasi,string tanggal);
+void tambahps(ListPAS &PA,ListDokter &LD,adrPAS ps,pas data,string speasialisasi,string tanggal);
 void pindah_jadwal(ListDokter &LD,ListPAS &PA,string namaps,string mid,string spesialisasi_awal,string tanggal_awal,string spesialisasi_akhir,string tanggal_akhir);
 adrPAS findps(ListPAS &PA,string namaps,string mid);
 //dokter
