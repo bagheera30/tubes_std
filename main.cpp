@@ -37,8 +37,7 @@ int main()
         cin>>n;
         if(n==1){
             if(first(LD)!=NULL){
-                d.spesialisasi=spealisasi;
-                d.tanggal=tanggal;
+
                 cout<<"medical record Id: ";cin>>a.mID;
                 cout<<"nama : ";cin>>a.namaPS;
                 cout<<"jenis : ";cin>>a.jenis;
@@ -46,6 +45,8 @@ int main()
                 cout<<"pilih dokter :";cin>>spealisasi;
                 cout<<"tanggal periksa :";cin>>tanggal;
                 d.kuota=kuota;
+                d.spesialisasi=spealisasi;
+                d.tanggal=tanggal;
                 adrPAS pa=bikinDataPAS(a);
                 tambahps(PA,LD,pa,a,spealisasi,tanggal);
             }else{
