@@ -30,7 +30,7 @@ int main()
         cout<<"6. tampikan data dokter "<<endl;
         cout<<"7. tampikan data dokter "<<endl;
         cout<<"8. jumlah pasien "<<endl;
-        cout<<"8. pasien dan dokternya "<<endl;
+        cout<<"9. delete pasien "<<endl;
         cout<<"9. pasien dan dokternya "<<endl;
         cout<<"0.keluar "<<endl;
         cout<<"pilih menu:";
